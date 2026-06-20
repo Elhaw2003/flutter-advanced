@@ -12,7 +12,7 @@ class DescriptionAndButtonWidget extends StatelessWidget {
       children: [
         Text(
           "Manage and schedule all of your medical appointments \neasily with Docdoc to get a new experience.",
-          style: AppTextStyles.font12grey400Weight,
+          style: AppTextStyles.font12greyNormal,
           textAlign: TextAlign.center,
         ),
         CustomHeightSpacingWidget(height: 32),

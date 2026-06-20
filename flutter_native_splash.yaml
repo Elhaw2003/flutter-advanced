@@ -1,0 +1,16 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/png/splash_image.png
+  fullscreen: true
+  # branding: assets/branding-development.png
+  # color_dark: "#121212"
+  # image_dark: assets/logo-development.png
+  # branding_dark: assets/branding-development.png
+
+  android_12:
+    image: assets/images/png/splash_image.png
+    icon_background_color: "#ffffff"
+    # image_dark: assets/logo-development.png
+    # icon_background_color_dark: "#121212"
+
+    #dart run flutter_native_splash:create --path=flutter_native_splash.yaml .... command 

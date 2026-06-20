@@ -30,9 +30,7 @@ class OnBoardingItemWidget extends StatelessWidget {
           child: Text(
             "Best Doctor \nAppointment App",
             textAlign: TextAlign.center,
-            style: AppTextStyles.font32primaryBlue700Weight.copyWith(
-              height: 1.4.h,
-            ),
+            style: AppTextStyles.font32primaryBlueBold.copyWith(height: 1.4.h),
           ),
         ),
       ],

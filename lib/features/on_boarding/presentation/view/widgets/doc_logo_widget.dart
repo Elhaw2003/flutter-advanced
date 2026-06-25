@@ -14,7 +14,7 @@ class DocLogoWidget extends StatelessWidget {
       children: [
         SvgPicture.asset(Assets.imagesSvgDocoLogo),
         CustomWidthSpacingWidget(width: 8),
-        Text("Docdoc", style: AppTextStyles.font22Black700Weight),
+        Text("Docdoc", style: AppTextStyles.font22BlackBold),
       ],
     );
   }

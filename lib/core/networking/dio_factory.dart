@@ -19,7 +19,7 @@ class DioFactory {
         },
       ),
     );
-    // dio.interceptors.add(ApiInterceptor());
+    dio.interceptors.add(ApiInterceptor());
     if (kDebugMode) {
       dio.interceptors.add(
         PrettyDioLogger(

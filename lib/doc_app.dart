@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced/core/helper/cash/secure_storage_keys.dart';
 import 'package:flutter_advanced/core/routing/app_routes.dart';
 import 'package:flutter_advanced/core/routing/router_generator.dart';
 import 'package:flutter_advanced/core/theming/app_colors.dart';
@@ -17,7 +18,7 @@ class DocApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Docdoc App',
           theme: ThemeData(primaryColor: AppColors.primaryBlueColor),
-          initialRoute: AppRoutes.homeScreen,
+          initialRoute: isLogged ? AppRoutes.homeScreen : AppRoutes.loginScreen,
           onGenerateRoute: (settings) =>
               RouterGenerator.routerGenerator(settings),
         );

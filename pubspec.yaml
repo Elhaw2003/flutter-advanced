@@ -37,13 +37,22 @@ dependencies:
   flutter_svg: ^2.3.0
   flutter_screenutil: ^5.9.3
   flutter_native_splash: ^2.4.8
+  dio: ^5.9.2
+  equatable: ^2.0.8
+  json_serializable: ^6.14.0
+  build_runner: ^2.15.0
+  pretty_dio_logger: ^1.4.0
+  get_it: ^9.2.1
+  internet_connection_checker_plus: ^3.1.0
+  firebase_core: ^4.11.0
+  dartz: ^0.10.1
+  flutter_bloc: ^9.1.1
+  bloc: ^9.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_gen_runner: ^5.14.1
-  build_runner: ^2.15.0
-
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -98,3 +107,5 @@ flutter_assets:
   output_path: lib/generated/
   filename: assets.dart
   field_prefix: null
+
+# dart run build_runner build --delete-conflicting-outputs (for generated file)  

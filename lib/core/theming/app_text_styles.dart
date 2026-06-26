@@ -10,6 +10,12 @@ class AppTextStyles {
     fontWeight: AppFontWeight.bold,
   );
 
+  static TextStyle font18BlackBold = TextStyle(
+    color: AppColors.blackColor,
+    fontSize: 18.sp,
+    fontWeight: AppFontWeight.bold,
+  );
+
   static TextStyle font32primaryBlueBold = TextStyle(
     color: AppColors.primaryBlueColor,
     fontSize: 32.sp,
@@ -28,9 +34,21 @@ class AppTextStyles {
     fontWeight: AppFontWeight.semiBold,
   );
 
+  static TextStyle font12primaryNormal = TextStyle(
+    color: AppColors.primaryBlueColor,
+    fontSize: 12.sp,
+    fontWeight: AppFontWeight.normal,
+  );
+
   static TextStyle font12greyNormal = TextStyle(
     color: AppColors.greyColor,
     fontSize: 12.sp,
+    fontWeight: AppFontWeight.normal,
+  );
+
+  static TextStyle font11moreGreyColorNormal = TextStyle(
+    color: AppColors.moreGreyColor,
+    fontSize: 11.sp,
     fontWeight: AppFontWeight.normal,
   );
 
@@ -38,6 +56,12 @@ class AppTextStyles {
     color: AppColors.whiteColor,
     fontSize: 16.sp,
     fontWeight: AppFontWeight.semiBold,
+  );
+
+  static TextStyle font18whiteMeduim = TextStyle(
+    color: AppColors.whiteColor,
+    fontSize: 18.sp,
+    fontWeight: AppFontWeight.meduim,
   );
 
   static TextStyle font14greyNormal = TextStyle(

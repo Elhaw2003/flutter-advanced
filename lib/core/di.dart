@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_advanced/core/helper/cash/secure_storage_caching.dart';
 import 'package:flutter_advanced/core/networking/api_consumer.dart';
 import 'package:flutter_advanced/core/networking/dio_consumer.dart';
 import 'package:flutter_advanced/core/networking/dio_factory.dart';
@@ -10,12 +11,19 @@ import 'package:flutter_advanced/features/login/presentation/cubit/cubit/login_c
 import 'package:flutter_advanced/features/register/data/repo/register_repo.dart';
 import 'package:flutter_advanced/features/register/data/repo/register_repo_impl.dart';
 import 'package:flutter_advanced/features/register/presentation/cubit/cubit/register_cubit.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
 final sl = GetIt.instance;
 
 Future<void> initiateGetIt() async {
+  sl.registerLazySingleton<FlutterSecureStorage>(() => FlutterSecureStorage());
+
+  sl.registerLazySingleton<SecureStorageCaching>(
+    () => SecureStorageCaching(sl<FlutterSecureStorage>()),
+  );
+
   sl.registerLazySingleton<ApiConsumer>(
     () => DioConsumer(dio: sl<Dio>(), networkInfo: sl<NetworkInfo>()),
   );

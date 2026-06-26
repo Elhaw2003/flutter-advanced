@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced/core/helper/custom_animated_snack_bar.dart';
 import 'package:flutter_advanced/core/helper/exetension.dart';
+import 'package:flutter_advanced/core/routing/app_routes.dart';
 import 'package:flutter_advanced/core/shared_widgets/custom_button_widget.dart';
 import 'package:flutter_advanced/core/theming/app_colors.dart';
 import 'package:flutter_advanced/features/login/data/models/login_request_model.dart';
@@ -54,6 +55,9 @@ class LoginButtonWidget extends StatelessWidget {
             context: context,
             message: state.loginResponseModel.message,
           );
+          Future.delayed(Duration(seconds: 2), () {
+            context.pushReplaceMentNamed(AppRoutes.homeScreen);
+          });
         } else if (state is LoginFailureState) {
           context.pop();
           CustomAnimatedShowSnackBar.failureSnackBar(

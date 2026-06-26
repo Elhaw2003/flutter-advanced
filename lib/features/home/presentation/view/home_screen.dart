@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced/core/shared_widgets/custom_spacing_widget.dart';
 import 'package:flutter_advanced/core/theming/app_colors.dart';
-import 'package:flutter_advanced/features/home/presentation/view/widgets/doctor_speciality_list_view_widget.dart';
 import 'package:flutter_advanced/features/home/presentation/view/widgets/doctor_speciality_see_all.dart';
+import 'package:flutter_advanced/features/home/presentation/view/widgets/get_specialization_and_recommendation_block_builder.dart';
 import 'package:flutter_advanced/features/home/presentation/view/widgets/home_card_banner_widget.dart';
 import 'package:flutter_advanced/features/home/presentation/view/widgets/home_top_bar_widget.dart';
-import 'package:flutter_advanced/features/home/presentation/view/widgets/recommendation_doctor_listView_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -26,9 +25,9 @@ class HomeScreen extends StatelessWidget {
               SliverToBoxAdapter(child: CustomHeightSpacingWidget(height: 24)),
               SliverToBoxAdapter(child: DoctorSpecialitySeeAll()),
               SliverToBoxAdapter(child: CustomHeightSpacingWidget(height: 16)),
-              SliverToBoxAdapter(child: DoctorSpecialityListViewWidget()),
-              SliverToBoxAdapter(child: CustomHeightSpacingWidget(height: 30)),
-              RecommendationDoctorListviewWidget(),
+              SliverToBoxAdapter(
+                child: GetSpecializationAndRecommendationBlockBuilder(),
+              ),
             ],
           ),
         ),

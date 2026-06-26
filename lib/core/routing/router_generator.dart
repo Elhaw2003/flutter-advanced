@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced/core/di.dart';
 import 'package:flutter_advanced/core/routing/app_routes.dart';
+import 'package:flutter_advanced/features/home/presentation/cubit/cubit/get_specialization_cubit.dart';
 import 'package:flutter_advanced/features/home/presentation/view/home_screen.dart';
 import 'package:flutter_advanced/features/login/presentation/cubit/cubit/login_cubit.dart';
 import 'package:flutter_advanced/features/login/presentation/view/login_screen.dart';
@@ -29,7 +30,13 @@ class RouterGenerator {
           ),
         );
       case AppRoutes.homeScreen:
-        return MaterialPageRoute(builder: (context) => HomeScreen());
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                sl<GetSpecializationCubit>()..getSpecialization(),
+            child: HomeScreen(),
+          ),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) =>

@@ -28,6 +28,14 @@ class $AssetsImagesPngGen {
   AssetGenImage get android12Logo =>
       const AssetGenImage('assets/images/png/android_12_logo.png');
 
+  /// File path: assets/images/png/banner.png
+  AssetGenImage get banner =>
+      const AssetGenImage('assets/images/png/banner.png');
+
+  /// File path: assets/images/png/image_banner.png
+  AssetGenImage get imageBanner =>
+      const AssetGenImage('assets/images/png/image_banner.png');
+
   /// File path: assets/images/png/on_boarding_image.png
   AssetGenImage get onBoardingImage =>
       const AssetGenImage('assets/images/png/on_boarding_image.png');
@@ -39,6 +47,8 @@ class $AssetsImagesPngGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     android12Logo,
+    banner,
+    imageBanner,
     onBoardingImage,
     splashImage,
   ];

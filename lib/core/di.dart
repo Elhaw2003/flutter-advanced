@@ -5,6 +5,9 @@ import 'package:flutter_advanced/core/networking/dio_consumer.dart';
 import 'package:flutter_advanced/core/networking/dio_factory.dart';
 import 'package:flutter_advanced/core/networking/internet_checker/network_info.dart';
 import 'package:flutter_advanced/core/networking/internet_checker/network_info_impl.dart';
+import 'package:flutter_advanced/features/home/data/repo/get_specialization/get_specialization_repo.dart';
+import 'package:flutter_advanced/features/home/data/repo/get_specialization/get_specialization_repo_impl.dart';
+import 'package:flutter_advanced/features/home/presentation/cubit/cubit/get_specialization_cubit.dart';
 import 'package:flutter_advanced/features/login/data/repo/login_repo.dart';
 import 'package:flutter_advanced/features/login/data/repo/login_repo_impl.dart';
 import 'package:flutter_advanced/features/login/presentation/cubit/cubit/login_cubit.dart';
@@ -46,5 +49,15 @@ Future<void> initiateGetIt() async {
   );
   sl.registerFactory<RegisterCubit>(
     () => RegisterCubit(registerRepo: sl<RegisterRepo>()),
+  );
+
+  /// home
+  sl.registerLazySingleton<GetSpecializationRepo>(
+    () => GetSpecializationRepoImpl(apiConsumer: sl<ApiConsumer>()),
+  );
+  sl.registerFactory<GetSpecializationCubit>(
+    () => GetSpecializationCubit(
+      getSpecializationRepo: sl<GetSpecializationRepo>(),
+    ),
   );
 }

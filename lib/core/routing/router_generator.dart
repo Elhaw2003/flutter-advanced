@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced/core/di.dart';
 import 'package:flutter_advanced/core/routing/app_routes.dart';
+import 'package:flutter_advanced/features/home/presentation/view/home_screen.dart';
 import 'package:flutter_advanced/features/login/presentation/cubit/cubit/login_cubit.dart';
 import 'package:flutter_advanced/features/login/presentation/view/login_screen.dart';
 import 'package:flutter_advanced/features/on_boarding/presentation/view/on_boarding_screen.dart';
@@ -27,6 +28,8 @@ class RouterGenerator {
             child: RegisterScreen(),
           ),
         );
+      case AppRoutes.homeScreen:
+        return MaterialPageRoute(builder: (context) => HomeScreen());
       default:
         return MaterialPageRoute(
           builder: (context) =>

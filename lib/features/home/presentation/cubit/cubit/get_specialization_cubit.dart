@@ -24,4 +24,18 @@ class GetSpecializationCubit extends Cubit<GetSpecializationState> {
       },
     );
   }
+
+  void changeIndex(int index) {
+    final currentState = state;
+
+    if (currentState is GetSpecializationSuccessState) {
+      emit(
+        GetSpecializationSuccessState(
+          specializationsResponseModel:
+              currentState.specializationsResponseModel,
+          selectedIndex: index,
+        ),
+      );
+    }
+  }
 }

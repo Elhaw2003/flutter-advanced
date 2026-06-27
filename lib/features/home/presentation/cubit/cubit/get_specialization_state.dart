@@ -21,11 +21,12 @@ final class GetSpecializationFailureState extends GetSpecializationState {
 
 final class GetSpecializationSuccessState extends GetSpecializationState {
   final SpecializationsResponseModel specializationsResponseModel;
-
+  final int selectedIndex;
   const GetSpecializationSuccessState({
     required this.specializationsResponseModel,
+    this.selectedIndex = 0,
   });
 
   @override
-  List<Object> get props => [specializationsResponseModel];
+  List<Object> get props => [specializationsResponseModel, selectedIndex];
 }
